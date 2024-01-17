@@ -1,13 +1,42 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('https://th.bing.com/th/id/R.0a889cffc75a6977fb47ee52b229501a?rik=550jrH8i4xBM8A&riu=http%3a%2f%2ffundacioncarlosslim.org%2fwp-content%2fuploads%2f2016%2f07%2fFutbol.jpg&ehk=dZRFPmO7LBcmOUBmneSKEUv271C4Pi070QMgoADf4H0%3d&risl=&pid=ImgRaw&r=0');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1{
+  display: flex;
+  justify-content: center;
+  color: white;
 }
+
+img{
+  border-radius: 10px;
+}
+
+.container-data{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.container-return{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-name{
+  width: 217px;
+  text-align: center;
+}
+
+/* .video-soccer{
+  width:100%;
+  height:0px;
+  position:relative;
+  padding-bottom:calc(56.25% + 335px);
+} */

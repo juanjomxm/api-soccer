@@ -29,10 +29,24 @@ function SoccerApi(){
     }, [])
 
     return(
-        <div>
+        <div className="container-data">
             {viewData.map((item, index) =>(
-                <div key={index}>
-                    <h2>{item.title}</h2>
+                <div 
+                key={index}
+                className="container-return"
+                >
+                    <h2 className="container-name">{item.competition.name}</h2>
+                    <h3>{item.title}</h3>
+                    <div>
+                        <img
+                        src={item.thumbnail}
+                        width={300}
+                        height={300}
+                        ></img>
+                        {/* <video className="video-soccer">
+                            <source src={item.videos.embed}/>
+                        </video> */}
+                    </div>
                     <a href={item.url}>Resumen</a>
                 </div>
             ))} 

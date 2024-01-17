@@ -1,12 +1,13 @@
 import React from "react";
+import { TitleSoccer } from "./TitleSoccer";
 import { SoccerApi } from "./Soccer";
 
 function App() {
   return (
-    <div>
-      <h1>SOCCER</h1>
+    <React.Fragment>
+      <TitleSoccer/>
       <SoccerApi/>
-    </div>
+    </React.Fragment>
   );
 }
 
