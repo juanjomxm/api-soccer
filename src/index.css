@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('https://th.bing.com/th/id/R.0a889cffc75a6977fb47ee52b229501a?rik=550jrH8i4xBM8A&riu=http%3a%2f%2ffundacioncarlosslim.org%2fwp-content%2fuploads%2f2016%2f07%2fFutbol.jpg&ehk=dZRFPmO7LBcmOUBmneSKEUv271C4Pi070QMgoADf4H0%3d&risl=&pid=ImgRaw&r=0');
+  background-image: url('https://images.alphacoders.com/923/923986.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -18,6 +18,19 @@ h1{
 img{
   border-radius: 10px;
 }
+input{
+  text-align: center;
+}
+a, p{
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.container-search{
+  display: flex;
+  justify-content: center;
+}
 
 .container-data{
   display: flex;
@@ -28,10 +41,30 @@ img{
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgba(32, 35, 41, .8);
+  border-radius: 20px;
+  margin-top: 30px;
+  color: white;
+  justify-content: flex-end;
 }
 .container-name{
   width: 217px;
   text-align: center;
+}
+
+.spinner {
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #4CAF50; 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  animation-direction: alternate;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* .video-soccer{

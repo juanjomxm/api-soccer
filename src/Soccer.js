@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { GlobalContext } from "./GlobalContext";
 
 const apiSoccer = axios.create({
     baseURL: "https://free-football-soccer-videos.p.rapidapi.com/",
@@ -11,26 +12,33 @@ const apiSoccer = axios.create({
 })
 
 function SoccerApi(){
-    const [viewData, setViewData] = React.useState([]);
+    const {
+        setViewData,
+        searchResult,
+        setLoading
+    } = React.useContext(GlobalContext)
 
-    React.useEffect(()=>{
-        const soccerView = async () => {
-            try {
-                const { data, status } = await apiSoccer.get();
-    
-                if (status === 200 || status === 201) {
-                    setViewData(data);
+    React.useEffect(()=>{ // De esta forma toda la informacion se renderiza en la pagina sin tener que agregar un boton para que lo haga
+        setTimeout(()=>{
+            const soccerView = async () => {
+                try {
+                    const { data, status } = await apiSoccer.get();
+        
+                    if (status === 200 || status === 201) {
+                        setViewData(data);
+                    }
+                } catch (error) {
+                    console.error('Error fetching data:', error);
                 }
-            } catch (error) {
-                console.error('Error fetching data:', error);
             }
-        }
-        soccerView()
+            setLoading(false)
+            soccerView()
+        }, 2000)
     }, [])
 
     return(
         <div className="container-data">
-            {viewData.map((item, index) =>(
+            {searchResult.map((item, index) =>( // Lo estoy haciendo bien, solo necesitaba cambiar el estado de viewData por el estado derivado pra buscar y filtrar los resultados
                 <div 
                 key={index}
                 className="container-return"
